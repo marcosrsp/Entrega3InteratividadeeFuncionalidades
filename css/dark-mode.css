@@ -1,0 +1,39 @@
+body[data-theme="dark"] {
+    --color-primary: #58a6ff;
+    --color-primary-dark: #80b6f3;
+    --color-secondary: #388E3C;
+    
+    --color-neutral-dark: #f0f6fc;
+    --color-neutral-medium: #8b949e;
+    --color-neutral-light: #161b22;
+    --color-background: #0d1117;
+    
+    --color-error: #f85149;
+}
+
+body[data-theme="dark"] .main-header,
+body[data-theme="dark"] .dropdown,
+body[data-theme="dark"] .card,
+body[data-theme="dark"] .modal-content {
+    background-color: var(--color-neutral-light);
+    border-color: #30363d;
+}
+
+body[data-theme="dark"] .main-nav .nav-links a {
+    color: var(--color-neutral-dark);
+}
+
+body[data-theme="dark"] .main-nav .nav-links a:hover,
+body[data-theme="dark"] .main-nav .nav-links a.active {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+}
+
+body[data-theme="dark"] .main-footer {
+    background-color: #010409;
+    color: var(--color-neutral-medium);
+}
+
+body[data-theme="dark"] .main-footer a {
+    color: var(--color-primary);
+}

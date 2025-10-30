@@ -10,27 +10,22 @@
     border-radius: 4px;
     transition: all 0.3s ease;
 }
-
 .btn-primary {
     background-color: var(--color-primary);
     color: var(--color-background);
 }
-
 .btn-primary:hover {
     background-color: var(--color-primary-dark);
     color: var(--color-background);
     text-decoration: none;
 }
-
 .btn-primary:focus {
     outline: 2px solid var(--color-primary-dark);
     outline-offset: 2px;
 }
-
 .btn-primary:active {
     transform: scale(0.98);
 }
-
 .btn[disabled] {
     background-color: var(--color-neutral-medium);
     cursor: not-allowed;
@@ -47,23 +42,19 @@
     flex-direction: column;
     height: 100%;
 }
-
 .card-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
-
 .card-content {
     padding: var(--spacing-3);
     flex-grow: 1;
 }
-
 .card-content h3 {
     font-size: 2rem;
     color: var(--color-primary);
 }
-
 .card-footer {
     padding: var(--spacing-3);
     border-top: 1px solid var(--color-neutral-light);
@@ -72,13 +63,11 @@
 .form-group {
     margin-bottom: var(--spacing-2);
 }
-
 .form-group label {
     display: block;
     margin-bottom: var(--spacing-1);
     font-weight: 700;
 }
-
 .form-control {
     width: 100%;
     padding: var(--spacing-2);
@@ -86,18 +75,15 @@
     border: 1px solid var(--color-neutral-medium);
     border-radius: 4px;
 }
-
 .form-control:focus {
     outline: none;
     border-color: var(--color-primary);
     box-shadow: 0 0 5px var(--color-primary-light);
 }
-
 .form-control.interacted:required:invalid {
     border-color: var(--color-error);
     background-color: #fff8f8;
 }
-
 .form-control.interacted:required:valid {
     border-color: var(--color-secondary);
 }
@@ -108,19 +94,16 @@
     border-radius: 4px;
     border: 1px solid;
 }
-
 .alert-info {
     color: var(--color-primary-dark);
     background-color: #e7f0f8;
     border-color: var(--color-primary);
 }
-
 .alert-success {
     color: #155724; 
     background-color: #d4edda; 
     border-color: var(--color-secondary);
 }
-
 .alert-error {
     color: var(--color-error); 
     background-color: #fdecea; 
@@ -135,11 +118,9 @@
     border-radius: 12px;
     color: var(--color-background);
 }
-
 .badge-new {
     background-color: var(--color-secondary);
 }
-
 .badge-featured {
     background-color: var(--color-primary);
 }
@@ -163,35 +144,81 @@
 
 .modal-content {
     background-color: var(--color-background);
-    padding: var(--spacing-4);
-    border-radius: 8px;
+    border-radius: 8px; 
     width: 90%;
     max-width: 500px;
     position: relative;
     transform: scale(0.9);
     transition: transform 0.3s ease;
+    padding: 0; 
+    overflow: hidden; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
 }
 
-.modal:target {
-    display: flex;
+.modal.is-open {
     opacity: 1;
     visibility: visible;
 }
-
-.modal:target .modal-content {
+.modal.is-open .modal-content {
     transform: scale(1);
 }
 
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-3);
+    border-bottom: 1px solid var(--color-neutral-light);
+}
+
+.modal-header h2 {
+    margin: 0; 
+    color: var(--color-primary); 
+    font-size: var(--font-size-lg); 
+}
+
+.modal-body {
+    padding: var(--spacing-3);
+}
+
+.modal-body ul {
+    margin-top: var(--spacing-2);
+}
+.modal-body li {
+    margin-bottom: var(--spacing-1);
+}
+.modal-body b {
+    color: var(--color-neutral-dark);
+}
+
 .modal-close {
-    position: absolute;
-    top: var(--spacing-2);
-    right: var(--spacing-2);
-    font-size: 3rem;
+    position: static; 
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-neutral-medium);
     text-decoration: none;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%; 
+    transition: background-color 0.2s ease;
 }
-
 .modal-close:hover {
     color: var(--color-neutral-dark);
+    background-color: #f1f1f1; 
+}
+
+a:focus,
+.btn:focus,
+.modal-close:focus {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+    text-decoration: none;
+}
+.form-control:focus,
+select:focus {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 1px;
+    box-shadow: none;
 }
