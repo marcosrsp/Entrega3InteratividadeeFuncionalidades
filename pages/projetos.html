@@ -47,8 +47,8 @@
                 <div>
                     <h2>Seja um Voluntário</h2>
                     <p>
-                        O voluntariado é a alma da nossa organização. Temos várias frentes de atuação. 
-                        Para se candidatar:
+                        O voluntariado é a alma da nossa organização. Temos várias frentes de atuação.
+                        Sua ajuda é extremamente necesária!
                     </p>
                 </div>
                 <a href="#cadastro" class="btn btn-primary" style="margin-top: var(--spacing-2);">Preencher Cadastro</a>
@@ -61,20 +61,25 @@
                         Sua contribuição financeira é vital para mantermos nossos projetos ativos.
                     </p>
                 </div>
-                <a href="#modal-doar" class="btn btn-primary" style="margin-top: var(--spacing-2);">Ver Formas de Doação</a>
+                <a href="#" id="open-modal-btn" class="btn btn-primary" style="margin-top: var(--spacing-2);">Ver Formas de Doação</a>
             </div>
         </div>
     </div>
 </section>
 
-<div class="modal" id="modal-doar">
+<div class="modal" id="modal-doar" role="dialog" aria-labelledby="modal-title">
     <div class="modal-content">
-        <a href="#" class="modal-close" title="Fechar">&times;</a>
-        <h2>Doe Agora!</h2>
-        <p>Sua ajuda é muito importante. Você pode doar por:</p>
-        <ul>
-            <li><b>PIX:</b> 00.123.456/0001-78 (CNPJ)</li>
-            <li><b>Transferência Bancária:</b> Banco Cruzeiro do Sul, Ag: 0001, C/C: 12345-6</li>
-        </ul>
+        <div class="modal-header">
+            <h2 id="modal-title">Doe Agora!</h2>
+            <a href="#" id="close-modal-btn" class="modal-close" title="Fechar">&times;</a>
+        </div>
+        
+        <div class="modal-body">
+            <p>Sua ajuda é muito importante. Você pode doar por:</p>
+            <ul>
+                <li><b>PIX:</b> 00.123.456/0001-78 (CNPJ)</li>
+                <li><b>Transferência Bancária:</b> Banco Cruzeiro do Sul, Ag: 0001, C/C: 12345-6</li>
+            </ul>
+        </div>
     </div>
 </div>

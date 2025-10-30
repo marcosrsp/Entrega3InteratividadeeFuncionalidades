@@ -3,36 +3,47 @@
 <head>
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONG Salve Vidas</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>ONG Salve Vidas</title> <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
 </head>
 <body>
 
     <header class="main-header">
         <div class="container">
-            <a href="#home" class="logo">
-                <img src="imagens/logoindexcadastro.jpg" alt="Logo da ONG Salve Vidas">
-            </a>
             
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="hamburger-label">
-                &#9776;
-            </label>
+            <h1>
+                <a href="#home" class="logo">
+                    <img src="imagens/logoindexcadastro.png" alt="ONG Salve Vidas - Página Inicial">
+                </a>
+            </h1>
 
-            <nav class="main-nav">
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Início</a></li>
-                    <li> 
-              <a href="#projetos">Projetos</a>
-          </li>
-                    <li><a href="#cadastro">Cadastro</a></li>
-                </ul>
-            </nav>
+            <div class="header-right-wrapper">
+                <div class="theme-switcher">
+                    <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
+                    <label for="theme-toggle" class="theme-toggle-label" aria-label="Alternar modo de cor claro e escuro">
+                        <span class="theme-toggle-inner"></span>
+                        <span class="theme-toggle-switch"></span>
+                    </label>
+                </div>
+                
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger-label" aria-label="Abrir e fechar menu de navegação">
+                    &#9776;
+                </label>
+    
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="#home" class="active">Início</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#cadastro">Cadastro</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <main id="app-root">
-        </main>
+    <main id="app-root" role="main" aria-live="polite">
+    </main>
 
     <footer class="main-footer">
         <div class="container">
@@ -51,6 +62,7 @@
     <script src="js/forms.js"></script>
     <script src="js/main.js"></script>
     <script src="js/router.js"></script>
+    <script src="js/accessibility.js"></script>
     
 </body>
 </html>
